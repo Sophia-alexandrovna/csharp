@@ -1,0 +1,44 @@
+﻿/*
+   Дисциплина: "Информатика и программирование"
+   Группа:      10МИ3
+   Студент:     Генералова Софья Александровна
+   Задача:      
+	Вычисление суммы и разности двух переменных, нахождение остатка от деления одного целого числа на другое целое число.
+   Дата:        20.09.16	
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+
+                Console.WriteLine("Напишите число а:");
+                string s = Console.ReadLine();
+                int a = Convert.ToInt32(s);
+                Console.WriteLine("Напишите число b:");
+                string s2 = Console.ReadLine();
+                int b = Convert.ToInt32(s2);
+                int c = a + b;
+                int f = a - b;
+                int w = a % b;
+                Console.WriteLine("Сумма чисел a и b:");
+                Console.WriteLine(c);
+                Console.WriteLine("Разность чисел a и b:");
+                Console.WriteLine(f);
+                Console.WriteLine("Остаток от деления числа a на b:");
+                Console.WriteLine(w);
+                Console.ReadLine();
+          
+            }
+        }
+    }
+}
+  
