@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("введите x ot 1 do 10");
+            string str = Console.ReadLine();
+            double x = double.Parse(str);
+
+           
+
+            double g = 0;
+            if (x > 3 ) 
+            {
+                Console.WriteLine("Вы ввели x= " + x + "\n зачет" );
+                
+
+            }
+ Console.ReadLine();
+
+            if (x < 3 )
+            {
+
+                Console.WriteLine("Вы ввели x= " + x + "\n зачет" );
+                
+            }
+
+           
+ Console.ReadLine();
+
+         
+        }
+    }
+}

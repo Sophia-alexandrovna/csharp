@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine("введите x");
+            string str = Console.ReadLine();
+            double x = double.Parse(str);
+            Console.WriteLine("введите y");
+            string str2 = Console.ReadLine();
+            double y = double.Parse(str2);
+            Console.WriteLine("введите z");
+            string str3 = Console.ReadLine();
+            double z = double.Parse(str3);
+
+
+
+            double g = x + y;
+            if (g > z ) 
+            {
+                Console.WriteLine(" x= " + x );
+                
+            }
+
+           Console.ReadLine();
+
+            if (!(g > z))
+            {
+                Console.WriteLine("x+y= " + g);
+               
+            }
+
+
+                Console.ReadLine();
+
+            
+
+           
+
+         
+        }
+    }
+}
