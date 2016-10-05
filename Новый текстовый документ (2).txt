@@ -10,7 +10,7 @@ namespace ConsoleApplication6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("������� x");
+            Console.WriteLine("ââåäèòå x");
             string str = Console.ReadLine();
             double x = double.Parse(str);
 
@@ -31,9 +31,80 @@ namespace ConsoleApplication6
 
            
 
-            Console.WriteLine("�� ����� x= " + x + "\n ��������� ������ ��������� = " + g);
+            Console.WriteLine("Âû ââåëè x= " + x + "\n Ðåçóëüòàò ðàáîòû ïðîãðàììû = " + g);
             Console.ReadLine();
 
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+Кр вариант 13
+		       
+   Дата:        05.09.16
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            double y,
+            x,
+            z,
+            s,
+            s1,
+            a,
+            b;
+            string str,
+                str1,
+                str2;
+            z = 2;
+            Console.Write("введите x: ");
+            str = Console.ReadLine();
+            x = double.Parse(str);            
+            Console.Write("введите a: ");
+            str1 = Console.ReadLine();
+            a = double.Parse(str1);   
+            Console.Write("введите b: ");
+            str2 = Console.ReadLine();
+            b = double.Parse(str2); 
+            y= Math.Sin(a+b);
+            if (x <= 2.5)
+            {
+                y = Math.Min(2 * a, 3 * b);
+            }
+            if (x > 2.5 && x <= 4.5)
+            {
+                s = Math.Pow(a, z);
+                s1 = Math.Pow(b, z);
+                y = Math.Sqrt(s + s1);
+            }
+            Console.WriteLine("вы ввели х=" + x + "\n вы ввели a= " + a + "\n вы ввели b= " + b + "\n y=" + y);         
+                   
+            Console.ReadLine();               
+
+        }
+    }
+}
+
+
+
