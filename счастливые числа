@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            string str;
+            int k;
+            int a;
+            int t;
+            int s1;
+            int s2;
+            int i;
+        link1:
+            {
+                s2 = 0;
+                s1 = 0;
+                t = 0;
+                str = Console.ReadLine();
+                k = int.Parse(str);
+                while (k > 0)
+                {
+                    a = k % 10;
+
+
+                    k = (k - a) / 10;
+                    t = t + 1;
+
+                }
+                k = int.Parse(str);
+
+                if (t % 2 == 0)
+                {
+                    for (i = t / 2 + 1; i <= t; i++)
+                    {
+                        a = k % 10;
+                        k = k / 10;
+                        s1 = s1 + a;
+                    }
+
+
+
+                    for (i = 1; i <= t / 2; i++)
+                    {
+
+
+
+                        a = k % 10;
+                        k = (k - a) / 10;
+                        s2 = s2 + a;
+
+
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("еще раз");
+                    goto link1;
+                }
+                if (s1 == s2) Console.WriteLine("счастливое");
+                else Console.WriteLine("несчастливое мда");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+     
