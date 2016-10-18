@@ -29,12 +29,12 @@ namespace ConsoleApplication1
                 int c = a + b;
                 int f = a - b;
                 int w = a % b;
-                Console.WriteLine("Сумма чисел a и b:");
-                Console.WriteLine(c);
-                Console.WriteLine("Разность чисел a и b:");
-                Console.WriteLine(f);
-                Console.WriteLine("Остаток от деления числа a на b:");
-                Console.WriteLine(w);
+                Console.WriteLine("Сумма чисел a и b: "+с);
+             
+                Console.WriteLine("Разность чисел a и b:"+f);
+              
+                Console.WriteLine("Остаток от деления числа a на b:"+w);
+             
                 Console.ReadLine();
           
             }
