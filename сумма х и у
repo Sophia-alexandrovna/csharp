@@ -12,13 +12,13 @@ namespace ConsoleApplication6
         {
 
 
-            Console.WriteLine("введите x");
+            Console.WriteLine("ГўГўГҐГ¤ГЁГІГҐ x");
             string str = Console.ReadLine();
             double x = double.Parse(str);
-            Console.WriteLine("введите y");
+            Console.WriteLine("ГўГўГҐГ¤ГЁГІГҐ y");
             string str2 = Console.ReadLine();
             double y = double.Parse(str2);
-            Console.WriteLine("введите z");
+            Console.WriteLine("ГўГўГҐГ¤ГЁГІГҐ z");
             string str3 = Console.ReadLine();
             double z = double.Parse(str3);
 
