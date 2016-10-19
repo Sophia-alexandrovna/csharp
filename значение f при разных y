@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x;
+            double F;
+            F = 0;
+            x = 0.1;
+
+            while (x <= 1.0)
+            {
+                F = x + 5;
+                Console.Write("F: " + F);
+
+                Console.WriteLine("x: " + x);
+                
+                x = x + 0.2;
+               
+               
+            }
+            Console.ReadLine();
+        }
+    }
+}
