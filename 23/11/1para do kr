@@ -1,0 +1,270 @@
+https://msdn.microsoft.com/ru-ru/library/txafckwd(v=vs.110).aspx
+формат вывода (колво памяти под каждый елемен массива)
+возможно это:
+
+using System;
+
+public class Example
+{
+    public static void Main()
+    {
+        string[] names = { "Adam", "Bridgette", "Carla", "Daniel",
+                         "Ebenezer", "Francine", "George" };
+        decimal[] hours = { 40, 6.667m, 40.99m, 82, 40.333m, 80,
+                                 16.75m };
+
+        Console.WriteLine("{0,-20} {1,5}\n", "Name", "Hours");
+        for (int ctr = 0; ctr < names.Length; ctr++)
+            Console.WriteLine("{0,-20} {1,5:N1}", names[ctr], hours[ctr]);
+        Console.ReadLine();
+    }
+
+}
+
+
+простые числа
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{	
+			int a = 10;
+			int j = 2;
+			while (a < 100) {//цикл для проверки всех двузначных чисел
+				for  (j = 2; j <= a; j++) {//проверяем число на простототу деля его на все число от двух до самого числа
+					if (a % j == 0) {//находим его первый делитель
+						break;
+					}
+
+				}
+				if (j == a) {//если первый делитель само число то число простое
+					Console.WriteLine ("{0}", j);
+					j = 2;
+				}
+				a++;
+			}
+			Console.Read();
+		}
+	}
+}
+
+
+
+массивы
+
+using System;
+
+namespace blabla
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+			int size;
+			Console.WriteLine("Введите количество эелементов в массиве:");
+			size = int.Parse(Console.ReadLine());
+			int[] a = new int[Math.Abs(size)];
+			string aa;
+			for (int i = 0; i <Math.Abs(size); i++)
+			{
+				Console.Write("Введите элемент номер {0} :", i+1);
+				aa = Console.ReadLine();
+				a[i] = Convert.ToInt16(aa);
+			}
+			Console.Write("Массив:");
+			foreach (int j in a)
+			{
+				Console.Write("{0} ", j);
+			}
+		}
+	}
+}
+
+
+using System;
+namespace tsett
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			int size = int.Parse(Console.ReadLine());
+			int[] array = new int[size];
+			for (int i = 0; i < size;i++){
+
+				array[i] = int.Parse(Console.ReadLine());
+			}
+			Console.Write("Массив: ");
+			foreach (int i in array) {
+				Console.Write("{0} ", i);
+			}
+			for (int i = 0, j = size - 1; i < size / 2; i++,j--) {
+				int buff = array[j];
+				array[j] = array[i];
+				array[i] = buff;
+			}
+			Console.Write("\r\nНовый массив: ");
+			foreach (int i in array)
+			{
+				Console.Write("{0} ", i);
+			}
+		}
+	}
+}
+
+
+
+
+using System;
+namespace tsett
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			int size = int.Parse(Console.ReadLine());
+			int[] array = new int[size];
+			for (int i = 0; i < size; i++)
+			{
+
+				array[i] = int.Parse(Console.ReadLine());
+			}
+			Console.Write("По-возрастанию:");
+			int buff;
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size - 1; j++)
+				{
+					if (array[j] >= array[j + 1])
+					{
+						buff = array[j];
+						array[j] = array[j + 1];
+						array[j + 1] = buff;
+					}
+				}
+			}
+			foreach (int i in array)
+			{
+				Console.Write("{0} ", i);
+			}
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size - 1; j++)
+				{
+					if (array[j] <= array[j + 1])
+					{
+						 buff = array[j];
+						array[j] = array[j + 1];
+						array[j + 1] = buff;
+					}
+				}
+			}
+			Console.WriteLine("");
+			Console.Write("По-убыванию:");
+			foreach (int i in array)
+			{
+				Console.Write("{0} ", i);
+			}
+		}
+	}
+}
+
+
+dz
+using System;
+using System.Linq;
+namespace blabla
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+
+			int size, ch1 = 0, ch2 = 0;
+			Console.WriteLine("Введите количество эелементов в массиве:");
+			size = int.Parse(Console.ReadLine());
+			int[] a = new int[Math.Abs(size)];
+			string aa;
+			for (int i = 0; i < Math.Abs(size); i++)
+			{
+				Console.Write("Введите элемент номер {0} :", i + 1);
+				aa = Console.ReadLine();
+				a[i] = Convert.ToInt16(aa);
+				int res = ((a[i] % 2 == 0) ? ch2++ : ch1++);
+			}
+			int[] m1 = new int[ch1];
+			int[] m2 = new int[ch2];
+			for (int i = 0, k = 0, k2 = 0; i < size; i++)
+			{
+				if (a[i] % 2 == 0)
+				{
+					m2[k] = a[i];
+					k++;
+				}
+				else {
+					m1[k2] = a[i];
+					k2++;
+				}
+			}
+			foreach (int j in a)
+			{
+				Console.Write("{0} ", j);
+			}
+			Console.WriteLine("\r\nЧетные:");
+			foreach (int j in m2)
+			{
+				Console.Write("{0} ", j);
+			}
+			Console.WriteLine("\r\nНечетные:");
+			foreach (int j in m1)
+			{
+				Console.Write("{0} ", j);
+			}
+		}
+	}
+}
+
+
+using System;
+
+namespace цццц
+{
+	class MainClass
+	{
+		static int cifra(int a) {
+			int u = 0;
+			for (int i = 0; i < Convert.ToString(a).Length;i++)
+			{
+				u += (a % 10);
+				a /= 10;
+			}
+			return u; 
+		}
+		public static void Main(string[] args)
+		{
+			int k = int.Parse(Console.ReadLine());
+			for (int i = 1000; i < 5001; i++)
+			{
+				double a = i / Math.Pow(10, 4 - k);
+				double b = i % Math.Pow(10, 4 - k);
+				int a1 = Convert.ToInt16(a);
+				int b1 = Convert.ToInt16(b);
+				int h = cifra(a1)-cifra(b1)+1;
+				Console.WriteLine("k={0} число:{1} разность старших разрядов {2}",k, i,h);
+
+			}
+		}
+	}
+}
+
+
+
+
