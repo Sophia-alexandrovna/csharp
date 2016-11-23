@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ДЗЛесовская
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ввод кол-ва элементов массива:");
+            int n = int.Parse(Console.ReadLine());
+            int[] mas = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Вы хотите вывести изначальный массив на экран? Если хотите - напишите 1, если нет - нажмите что угодно, кроме 1:");
+            int a = int.Parse(Console.ReadLine());
+            if (a == 1)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write("{0}, ", mas[i]);
+                }
+            }
+            Console.WriteLine("\n");
+            int l = 0, k = 0, v = 0;
+
+            int j = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (mas[i] % 2 == 0)
+                {
+
+                    l++;
+                }
+            }
+            k = n - l;
+
+            int[] chet = new int[l]; //чисто для ограниченного выделения памяти
+            int[] nechet = new int[k];
+
+            for (int i = 0; i < n; i++)
+            {
+                if (mas[i] % 2 == 0)
+                {
+                    chet[j] = mas[i];
+                    j++;
+                }
+                else
+                {
+                    nechet[v] = mas[i];
+                    v++;
+                }
+            }
+
+            for (int i = 0; i < l; i++)
+            {
+                Console.Write("{0}, ", chet[i]);
+            }
+            Console.WriteLine("\n"); // перенос на другую строчку
+            for (int i = 0; i < k; i++)
+            {
+                Console.Write("{0}, ", nechet[i]);
+            }
+
+            Console.ReadKey();
+
+            /* Console.WriteLine("\n"); 
+            int[] mas1 = new int[10000];
+            Console.WriteLine("Сколько Вы хотите заполнить элементов в массиве?");
+            int c = int.Parse(Console.ReadLine());
+            for(int i = 0; i<c; i++)
+            {
+                mas1[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Вы хотите вывести на экран вышедший массив? Если хотите - напишите 1, если нет - 2:");
+            a = int.Parse(Console.ReadLine());
+            if (a == 1)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write("{0}, ", mas1[i]);
+                }
+            }
+            Console.ReadKey();
+            */
+        }
+    }
+}
