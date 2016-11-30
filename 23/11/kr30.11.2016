@@ -1,0 +1,33 @@
+/*Генералова Софья 10МИ3 ВАРИАНТ 6*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;                        //описание переменных
+            Random rand = new Random();
+            Console.WriteLine("Введите размер массива: ");
+            int h = int.Parse(Console.ReadLine());//пользователь вводит кол-во элементов в массиве, программа преобразовывает в int
+            int[] IM = new int[h];//создание массива
+            
+            for (i = 1; i < h; i++)
+            {
+                IM[i] = rand.Next(0, 2);//заполнение массива c помощью метода
+        }
+            Array.Sort(IM);//сортировка с помощью метода
+            for (i = 1; i < h; i++)
+            {
+                Console.Write(IM[i]);//вывод массива
+            }
+            Console.ReadKey();
+        }
+    }
+}
