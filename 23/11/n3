@@ -1,0 +1,37 @@
+/*Дисциплина: "Информатика и программирование"
+   Группа:      10ми3
+   Студент:     Алиева Елизавета Руслановна
+   Задача:      3
+   Дата:        30.11.2016
+Вещественный массив А генерируем при помощи датчика случайных чисел. 
+Размерность задает пользователь. 
+В массив В переносим дробные  части чисел массива А, в конец массива дописываем сумму элементов массива В
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0; //счётчик
+            Console.WriteLine("Введите размер массива A:"); 
+            int size = int.Parse(Console.ReadLine()); //считываем размер массива А
+            double[] A = new double[size]; //первый массив
+            Random rand = new Random(); //создаём переменную случайной генерации чисел
+            for (i = 0; i <size; i++) //начало цикла, будут присваиваться поочерёдно каждому элементу массива А значение
+                A[i] = rand.Next(1,1000)+ rand.Next(1,100)/100; //генерируем случайные значениея
+            for (i = 0; i < size; i++)
+                Console.WriteLine(A[i]);
+            double j=rand.Next(1, 100) / 100;
+            Console.WriteLine(j);
+           
+            Console.ReadLine(); //Ожидаем нажатие клавиши ENTER для завершения
+        } //конец определения метода
+    }//Конец определения класса
+} 
+
