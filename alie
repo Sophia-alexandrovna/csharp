@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        Link1:
+            {
+                Console.WriteLine("Введите размерность матрицы");
+                int k1 = int.Parse(Console.ReadLine());
+
+                int k2 = int.Parse(Console.ReadLine());
+                Random rand = new Random();
+                if (k1 % 2 == 1) {
+                    Console.WriteLine("Неподходящая размерность, попробуйте ещё раз");
+                    goto Link1;
+                }
+
+                int[,] A = new int[k1, k2];
+                int[,] C = new int[k1, k2];
+                Console.WriteLine("Исходная матрица");
+                for (int i = 0; i < k1; i++)
+                {
+
+                    Console.WriteLine();
+                    for (int j = 0; j < k2; j++)
+                    {
+                        A[i, j] = rand.Next(0, 100);
+                        Console.Write(A[i, j] + "\t");
+
+                    }
+                }
+
+                Console.WriteLine("\t");
+                for (int i = 0; i < k1 / 2; i++)
+                {
+                    Console.WriteLine("\t");
+                    for (int j = 0; j < k2; j++)
+                    {
+
+                        int h = A[i, j];
+                        A[i, j] = A[k1 / 2 + i, j];
+                        A[k1 / 2 + i, j] = h;
+
+
+
+
+                    }
+                }
+                Console.WriteLine("Измененная матрица");
+                for (int i = 0; i < k1; i++)
+                {
+                    Console.WriteLine("\t");
+                    for (int j = 0; j < k2; j++)
+                    {
+
+
+
+
+                        Console.Write(A[i, j] + "\t");
+
+                    }
+                }
+                Console.ReadLine();
+            
+            }
+
+            
+
+        }
+    }
+}
