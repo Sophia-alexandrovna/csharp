@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1Generalova
+{
+    class Program
+    {
+
+
+        static void vivod(int[][] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = 0; j < a.Length; j++)
+                {
+                    Console.Write("{0,3}", a[i][j]);
+                }
+                Console.Write("\n");
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            int n;
+
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("n = " + n);
+            int[][] matr = new int[n][];
+            Random rnd = new Random();
+            for (int i = 0; i < n; i++)
+            {
+                matr[i] = new int[n];
+            }
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    int t = rnd.Next(0, 100);
+                    matr[i][j] = t;
+                }
+            }
+           
+            vivod(matr);
+            Console.ReadLine();
+        }
+    }
+}
