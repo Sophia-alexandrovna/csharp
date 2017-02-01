@@ -25,19 +25,19 @@ namespace ConsoleApplication1
             do
             {
                 
-                Console.Write("Введите размер массива: ");
+                Console.Write("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ");
                 int N = int.Parse(Console.ReadLine());
 
                 int[] a = new int[N];
 
                 Metod1(a,N);
                 
-                Console.Write("\n" + "Нажните Y: ");
+                Console.Write("\n" + "РЅР°Р¶РјРёС‚Рµ Y: ");
                 rep = char.Parse(Console.ReadLine());
 
                 if (rep != 'y')
                 {
-                    Console.WriteLine("Удачного дня! :D");
+                    Console.WriteLine("good day :D");
                     Console.ReadKey();
                 }
             }while(rep == 'Y' || rep == 'y');
