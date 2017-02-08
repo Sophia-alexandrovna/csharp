@@ -1,0 +1,34 @@
+static string met(string n) 
+{ 
+if (n.IndexOf("+") != -1) 
+n = n.Replace("+","сложение"); 
+if (n.IndexOf("-") != -1) 
+n = n.Replace("-", "вычитание"); 
+if (n.IndexOf("*") != -1) 
+n = n.Replace("*", "ужножение"); 
+if (n.IndexOf("/") != -1) 
+n = n.Replace("/", "деление"); 
+return n; 
+} 
+
+static void Main(string[] args) 
+{ 
+Console.WriteLine(met("1+2-3*4/5")); 
+}
+1 задача
+static void mul(ref int a, ref int b) 
+{ 
+a = a * b; 
+} 
+static void Main(string[] args) 
+{ 
+int a = Convert.ToInt32(Console.ReadLine()); 
+int b = Convert.ToInt32(Console.ReadLine()); 
+mul(ref a, ref b); 
+Console.WriteLine(a); 
+Console.ReadKey(); 
+}
+2 задача
+Перейти в конец истории
+Выбрать файлы
+Ещё
