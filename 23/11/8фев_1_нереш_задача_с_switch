@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1Generalova
+{
+    class Program
+    {
+
+
+        static void vivod_slov(string n)
+        {
+            switch (n)
+            {
+
+                case "+":
+                     
+                    Console.WriteLine("сложение");
+                    break;
+                case "-":
+                    Console.WriteLine("вычитание");
+                    break;
+                case "/":
+                    Console.WriteLine("деление");
+                    break;
+                case "*":
+                    Console.WriteLine("умножение");
+                    break;
+                default:
+                    Console.WriteLine("ne to:");
+                    break;
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            
+            string n = Console.ReadLine();
+
+            vivod_slov(n);
+
+            Console.ReadLine();
+        }
+    }
+}
