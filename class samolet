@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Самолёт
+    {
+        long номер;
+        string тип;
+        double груз;
+        public Самолёт(long номер, string тип, double груз)
+        {
+            this.номер = номер;
+            this.тип = тип;
+            this.груз = груз;
+        }
+        public string Показать()
+        {
+            return "Самолет №" + номер.ToString() + " типа " + тип + ", перевозит " + груз + " тонн груза.";
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] номера = { 1234, 2345, 3456, 4567, 5678, 6789 };
+            string[] тип = { "кукурузник", "истребитель", "грузовой", "пассажирский" };
+            double[] груз = { 0.03, 0.01, 3, 2 };
+            int n = 4;
+            Самолёт[] самолётики = new Самолёт[n];
+            for (int i = 0; i < n; ++i)
+            {
+                самолётики[i] = new Самолёт(номера[i], тип[i], груз[i]);
+                Console.WriteLine(самолётики[i].Показать());
+            }
+            Console.ReadKey();
+        }
+    }
+}
