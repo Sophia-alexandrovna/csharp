@@ -1,14 +1,20 @@
+/*
+ Сформировать класс Запрос. Методы Заполнить (массив типа Газ), Заполнить (массив типа Электро)
+ Вывести (массив типа Газ) Вывести (массив типа Электро)
+ Заполнить (ArrayList платеж дополняем данными из массива типа Газ)
+ Заполнить ((ArrayList платеж дополняем данными из массива типа Электро)
+ Вывести (ArrayList платеж) - требуется использовать механизм распознавания типа элемента списка (is)*/
 ﻿using System;
 using System.Collections;
 
 namespace ConsoleProject1
 {
-    class Gas
+    class Gas//класс 
     {
         public int payment;
         public string payer;
 
-        public Gas(string payer, double amount)
+        public Gas(string payer, double amount)//метод
         {
             this.payment = (int) Math.Truncate(amount * .6);
             this.payer = payer;
@@ -20,7 +26,7 @@ namespace ConsoleProject1
         public int payment;
         public string payer;
 
-        public Electricity(string payer, double amount)
+        public Electricity(string payer, double amount)//метод
         {
             this.payment = (int) Math.Truncate(amount * .75);
             this.payer = payer;
@@ -33,9 +39,9 @@ namespace ConsoleProject1
         }
     }
 
-    class Request
+    class Request//Сформировать класс Запрос
     {
-        public static void Fill(Gas[] arr)
+        public static void Fill(Gas[] arr)//метод Заполнить (массив типа Газ)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -44,7 +50,7 @@ namespace ConsoleProject1
             }
         }
 
-        public static void Fill(Electricity[] arr)
+        public static void Fill(Electricity[] arr)//метод Заполнить (массив типа Электро)
         {
             Console.WriteLine("После выбора способа оплаты введите имя плательщика и сумму/показания счетчика.");
             for (int i = 0; i < arr.Length; i++)
@@ -75,7 +81,7 @@ namespace ConsoleProject1
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("Имя плательщика: " + arr[i].payer + "\n\tОплата: " + arr[i].payment + " руб.\n");
+                Console.WriteLine("Имя плательщика: " + arr[i].payer + "\n\tОплата: " + arr[i].payment + " руб.\n");//Вывести (массив типа Газ)
             }
         }
 
@@ -83,11 +89,12 @@ namespace ConsoleProject1
 		{
 			for (int i = 0; i < arr.Length; i++)
 			{
-				Console.WriteLine("Имя плательщика: " + arr[i].payer + "\n\tОплата: " + arr[i].payment + " руб.\n");
+				Console.WriteLine("Имя плательщика: " + arr[i].payer + "\n\tОплата: " + arr[i].payment + " руб.\n");//Вывести (массив типа Электро)
 			}
 		}
 
-        public static void Log(ArrayList ls)
+        public static void Log(ArrayList ls)//метод Заполняет (ArrayList платеж дополняем данными из массива типа Газ)
+		//Заполнить (ArrayList платеж дополняем данными из массива типа электро)
         {
             for (int i = 0; i < ls.Count; i++)
             {
